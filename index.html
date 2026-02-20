@@ -1,59 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Unity Game Developer | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <meta charset="UTF-8">
+    <title>Unity Game Developer | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: #f1f5f9;
+        }
+        .main-header {
+              background: linear-gradient(90deg, #111, #1a1a1a);
+            padding: 20px;
+            text-align: center;
+}
 
-<header>
-  <h1>Umber Fishan</h1>
-  <p>Unity Game Developer | Mobile & PC</p>
+.mypic {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+    height:100px;
+}
+
+       
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(180deg, #111, #2b2b2b);
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+      
+
+        section {
+            padding: 0px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        .skills-container {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .skills-btn {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 30px;
+        border: 1px solid #222;
+        background: #111;
+        color: #ccc;
+        margin-bottom: 30px;
+    }
+
+    .skills-card {
+        background: linear-gradient(90deg, #111, #1a1a1a);
+        border-radius: 20px;
+        padding: 35px 45px;
+        border: 1px solid #1f1f1f;
+        transition: 0.3s;
+    }
+
+    .skills-card:hover {
+        border-color: #333;
+        transform: translateY(-5px);
+    }
+
+    .skills-list {
+        color: #ddd;
+        line-height: 1.8;
+        font-size: 16px;
+    }
+
+    .skills-list li {
+        margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .skills-card {
+            padding: 25px;
+        }
+    }
+
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+               background: linear-gradient(180deg, #111, #212020);
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(0deg, #111, #2b2b2b);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-radius: 30px;
+            border: 1px solid white;
+        }
+         .btn:hover {
+            background: white;
+            color: black;
+        }
+        table,td{
+  border:1px solid white;
+}
+
+.stats-container {
+        max-width: 1100px;
+        margin: 50px auto;
+        background: linear-gradient(90deg, #0a0a0a, #111);
+        border-radius: 20px;
+        padding: 40px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .stats-btn {
+        background: #1a1a1a;
+        padding: 12px 22px;
+        border-radius: 30px;
+        color: #ccc;
+        font-size: 14px;
+        border: 1px solid #222;
+        cursor: pointer;
+    }
+
+    .stats {
+        display: flex;
+        gap: 70px;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat h2 {
+        font-size: 48px;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .stat p {
+        margin-top: 10px;
+        color: #aaa;
+        font-size: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .stats-container {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stats {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+    
+    .services-container {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .services-btn {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 30px;
+        border: 1px solid #222;
+        background: #111;
+        color: #ccc;
+        margin-bottom: 30px;
+    }
+
+    .service-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #111, #1a1a1a);
+        border-radius: 20px;
+        padding: 30px 40px;
+        margin-bottom: 25px;
+        border: 1px solid #1f1f1f;
+        transition: 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        border-color: #333;
+    }
+
+    .service-title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .service-desc {
+        max-width: 550px;
+        color: #bbb;
+        line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .service-card {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+<header class="main-header">
+<img class="mypic" src="" alt="Mine" width="313" height="265">
+    <h1>Umber Fishan</h1>
+    <p>Senior Unity Game Developer</p>
 </header>
 
-<section>
-  <h2>Projects</h2>
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-  <div class="project">
-    <h3>Fruit Juice Simulator</h3>
-    <p>Casual mobile game with touch-based mechanics.</p>
-    <ul>
-      <li>Screen-space drag & drop</li>
-      <li>UI scaling for all resolutions</li>
-      <li>VIP & progression systems</li>
-    </ul>
-    <a href="#">Gameplay Video</a> |
-    <a href="#">GitHub</a> |
-    <a href="#">itch.io</a>
-  </div>
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        As a Senior Unity Developer, I build complete, optimized, and engaging games using Unity, focusing on performance, scalability, and smooth player experience.</p>
+<p>
+ create games that are fun, smooth, and well-optimized. With experience in many different game genres, I turn ideas into polished and engaging experiences by combining creativity, technical skills, and a strong understanding of what players enjoy.<p/>
+<p>I constantly explore new tools, techniques, and design approaches to push the boundaries of gameplay. From AI systems to animations and optimization, I strive to deliver games that not only look and play great but also leave a lasting impression on players. Every project is an opportunity to innovate and bring unique ideas to life.
+    </p>
+</section>
+
+<section id="stats">
+    <div class="stats-container">
+
+    <button class="stats-btn">My Stats</button>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h2>7+</h2>
+            <p>Years of Experience</p>
+        </div>
+
+        <div class="stat">
+            <h2>99+</h2>
+            <p>Successful Projects</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<section id="skills">
+    <div class="skills-container">
+
+    <div class="skills-btn">My Skills</div>
+
+    <div class="skills-card">
+        <ul class="skills-list">
+            <li>Unity 3D / 2D</li>
+            <li>C# Programming</li>
+            <li>Physics Implementation</li>
+            <li>AI Systems & NPC Behavior</li>
+            <li>Graphics Development (Particle systems, shaders, DoTween etc.)</li>
+            <li>In-App Purchases (IAP)</li>
+            <li>Plugin Handling (AppLovin, AdMob, Facebook and Unity Ads integration)</li>
+            <li>Game Performance (Firebase event handling and crash analysis)</li>
+            <li>Mobile Optimization</li>
+        </ul>
+    </div>
+
+</div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+
+        <div class="card">
+            <h3>Bank Heist Game</h3>
+            <p>Stealth-based robbery game with guard AI, cameras, and combat system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>Supermarket Tycoon</h3>
+            <p>Business simulation game with customer AI, inventory system, and cashier mechanics.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div> <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+         <div class="card">
+            <h3>VIP Nightclub Manager</h3>
+            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
+            <a href="#" class="btn">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="Services">
+    <div class="services-container">
+
+    <div class="services-btn">My Services</div>
+
+    <div class="service-card">
+        <div class="service-title">1. Gameplay Programming:</div>
+        <div class="service-desc">
+            I speI specialize in creating modern and elegant designs that not only captivate audiences but also effectively communicate your brand message.
+        </div>
+    </div>
+
+    <div class="service-card">
+        <div class="service-title">2. UI & 3D Integration:</div>
+        <div class="service-desc">
+            I integrate menus, buttons, and 3D environments seamlessly, creating a polished and immersive experience.
+        </div>
+    </div>
+    
+    <div class="service-card">
+        <div class="service-title">3. AI & Animation:</div>
+        <div class="service-desc">
+            I design smart NPC behaviors and smooth animations that make the game world feel alive.
+        </div>
+    </div>
+    
+    <div class="service-card">
+        <div class="service-title">4. Optimization:</div>
+        <div class="service-desc">
+            I optimize games for smooth performance and stability across multiple platforms and devices.
+        </div>
+    </div>
+</div>
 
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <p>
-    Unity • C# • Mobile UI • Touch Input • Optimization • IAP
-  </p>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: umberfishan7@gmail.com.com</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    <p>GitHub: github.com/yourusername</p>
 </section>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    Unity developer focused on mobile games, smooth gameplay mechanics,
-    and scalable systems. Experienced with touch input and performance optimization.
-  </p>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>
-    <a href="#">GitHub</a> |
-    <a href="#">itch.io</a> |
-    <a href="#">LinkedIn</a>
-  </p>
-</section>
+<footer>
+    <p>© 2026 Umber Fishan | Unity Game Developer</p>
+</footer>
 
 </body>
 </html>
