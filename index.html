@@ -101,21 +101,65 @@
 
 
         .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
 
-        .card {
-               background: linear-gradient(180deg, #111, #212020);
-            padding: 20px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
+    .card {
+        background: linear-gradient(180deg, #111, #212020);
+        padding: 20px;
+        border-radius: 15px; /* Softer corners */
+        transition: 0.3s;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #333; /* Subtle border for definition */
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+    .card:hover {
+        transform: translateY(-10px); /* Lift effect */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .card img {
+        width: 100%;       /* Makes image responsive */
+        height: 200px;     /* Fixed height for uniformity */
+        object-fit: cover; /* Crops image to fill the area without stretching */
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+        margin: 10px 0;
+        font-size: 1.4rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #ccc;
+        margin-bottom: 20px;
+        flex-grow: 1; /* Pushes the button to the bottom */
+    }
+
+    .btn {
+        display: inline-block;
+        background: #e91e63; /* Example color, change to match your theme */
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        transition: 0.3s;
+    }   
+
+    .btn:hover {
+        background: #c2185b;
+    }  
 
         footer {
             text-align: center;
@@ -265,6 +309,7 @@
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#Services">Services</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -326,66 +371,115 @@
     <h2>My Projects</h2>
     <div class="projects">
 
-        <div class="card">
-            <h3>Bank Heist Game</h3>
-            <p>Stealth-based robbery game with guard AI, cameras, and combat system.</p>
-            <a href="#" class="btn">View Project</a>
+       <div class="card">
+            <img src="images/imSecurity.jpg">
+            <h3>Cinema Security Guard</h3>
+            <p>A mobile simulation game where players step into the role of a security professional. Manage theater safety by inspecting vehicles, screening customers for prohibited items, validating tickets, and overseeing the cinema’s snack shop.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ksgames.i.am.security.gaurd.game" target="_blank" class="btn">View Project</a>
         </div>
 
         <div class="card">
+            <img src="images/supermarket.jpg">
             <h3>Supermarket Tycoon</h3>
-            <p>Business simulation game with customer AI, inventory system, and cashier mechanics.</p>
-            <a href="#" class="btn">View Project</a>
+            <p>Kart to Supermarket Tycoon is a 3D mobile game where you start with a small street kart and work your way up to running a full supermarket. You manage inventory, keep customers happy, handle cash and card transactions, and hire staff like guards, pharmacists, and salespeople. </p>
+            <a href="https://play.google.com/store/apps/details?id=com.gamesplashstudio.cart.to.supermarket.tycon.sim" target="_blank" class="btn">View Project</a>
         </div>
 
         <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+            <img src="images/mine.jpg">
+            <h3>Dreamy Apartment</h3>
+            <p>A 3D Game where you can design your dream space in this relaxing drag-and-drop room decorating game! Place furniture and decor items in their correct spots to transform empty rooms into beautiful, cozy spaces.</p>
+            <a href="#" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+            <img src="images/MagicJuicer.jpg">
+            <h3>Magic Juice Blender</h3>
+            <p>2D Juice making game. Take precise orders, blend fresh fruits, and customize sweetness and temperature to meet every customer’s exact request. Manage the entire process from blending to bottling, ensuring every glass is perfectly capped, strawed, and served.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.ksgamestudios.magic.fruit.blender.blend.shake.juice" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+            <img src="images/houseRenovation.png">
+            <h3>House Renovation</h3>
+            <p>In this 3D game the player has an old house. Player can clean the house, update furniture, update decoration, repaint walls and floors and place things in desirable positions.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.GameSplashStudio.Renovate.Design.And.Fix.The.House" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+             <img src="images/carRoadTrinSurvival.jpg">
+            <h3>Car Road Trip Survival</h3>
+            <p>Player assembles his car and goes on a long drive. Get flint from stones, Hunt animals and get water from oases. Sale these collected items to full car fuels and to buy hunting tools.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.GameSplashStudio.Car.Mechanic.Driving.Simulator" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+             <img src="images/chickenNEggs.jpg">
+            <h3>Chicken and Eggs</h3>
+            <p>Chiken egg game of collecting eggs by distracting Chiken.Spreading grains,throwing pebble and amazing distracting acts.</p>
+            <a href="#" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+             <img src="images/pregnantMother.jpg">
+            <h3>Pregnant Mother Family Life</h3>
+            <p>In this game users can experience motherhood. It is a level based game with all trimesters of pregnancy and baby care.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.GameSplashStudio.virtual.mom.baby.pregnant.simulator.game" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
-        </div> <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+             <img src="images/powerWash.jpg">
+            <h3>Power Wash</h3>
+            <p>It’s a level based game. Player can wash dirty things, and can choose different water guns and nozzles.</p>
+            <a href="#" target="_blank" class="btn">View Project</a>
+       
+         </div> <div class="card">
+             <img src="images/roadTrip.jpg">
+            <h3>Road Trip Car Game</h3>
+            <p>3D Game developed using RFPS for player and RCC for car. Player take car and go on long drive. Fill fuel,coolant and engine oil. Fullfill thirst and hunger from shops. Can hunt animals and kill dangrous animals. </p>
+            <a href="https://play.google.com/store/apps/details?id=com.GameSplashStudio.Car.Drive.Long.Road.Trip.Game" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+             <img src="images/cookingSim.png">
+            <h3>Cooking simulator</h3>
+            <p>A realistic 3D cooking simulator where players manage a busy kitchen. Fully interactive system that allows players to take orders, prepare ingredients, and deliver dishes to customers</p>
+            <a href="https://play.google.com/store/apps/details?id=com.GameSplashStudio.Cooking.simulator.Chef.Game" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
-            <h3>VIP Nightclub Manager</h3>
-            <p>Crowd system with VIP mechanics, event triggers, and DJ interaction system.</p>
-            <a href="#" class="btn">View Project</a>
+             <img src="images/mine.jpg">
+            <h3>Car Sale Simulator</h3>
+            <p>Setup new showroom. clean it and drive cars to the showroom. Set Car rates and sell them on best prices. Purchase cars, make best deals.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.GameSplashStudio.Car.Dealership.CarSale.Simulator2024" target="_blank" class="btn">View Project</a>
+        </div>
+         <div class="card">
+             <img src="images/carSale.jpg.jpg">
+            <h3>Farm Life Simulator</h3>
+            <p>Experience life as a farmer in this 3D level-based game featuring a fully interactive environment. Take on daily tasks, from feeding sheep and cows to milking cows and collecting eggs, as you complete various tasks to manage a farm.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.AnimalFarmSim" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="card">
+             <img src="images/lawnMower.png">
+            <h3>Lawn Mower Simulator</h3>
+            <p>In mowing simulator lawn grass game player ride lawnmover with simple controllers and chop down the overgrown grass. Player can upgrade lawnmower.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.gamesplashstudio.lawn.mowing.simulator.grass.cutting" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="card">
+             <img src="images/shopingSim.jpg">
+            <h3>Shopping Simulator</h3>
+            <p>A 3D simulation where players go to mart to complete shopping lists. I implemented a fully interactive system that allows players to handle shopping carts, placing items in the basket, and complete the gameplay loop at a checkout counter.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.GameSplashStudio.Car.Dealership.CarSale.Simulator2024" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="card">
+             <img src="images/hospitalSim.jpg.jpg">
+            <h3>Hospital Simulator</h3>
+            <p>Play as a Doctor or a patient & get the best experience of a hospital simulator.Perform the Operates & Surgeries.Exciting Levels of Patient Cases to Play.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.operate.hospital.simulator" target="_blank" class="btn">View Project</a>
+        </div>
+         <div class="card">
+             <img src="images/bankrobery.jpg">
+            <h3>Bank Heist Game</h3>
+            <p>3D Game developed using RFPS, where players enters in high-security bank during night missions. The project emphasizes AI behavior systems, stealth mechanics, combat integration, and immersive night-time level design.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.bank.robbery.sim" target="_blank" class="btn">View Project</a>
+        </div>
+        <div class="card">
+             <img src="images/kidsGames.jpg">
+            <h3>High School Athletics Games</h3>
+            <p>Kids outdoor and indoor games. Many 2D and 3D games together. BasketBall, kart racing, cycle riding, jigsaw puzzle, ABC tracing and many mini games.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.lp.summer.school.athletics.kids.sport.events" target="_blank" class="btn">View Project</a>
         </div>
 
     </div>
@@ -399,7 +493,7 @@
     <div class="service-card">
         <div class="service-title">1. Gameplay Programming:</div>
         <div class="service-desc">
-            I speI specialize in creating modern and elegant designs that not only captivate audiences but also effectively communicate your brand message.
+            I focus on building responsive controls and exciting mechanics that keep players engaged.
         </div>
     </div>
 
@@ -430,7 +524,7 @@
 <section id="contact">
     <h2>Contact Me</h2>
     <p>Email: umberfishan7@gmail.com.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+    <p>LinkedIn: www.linkedin.com/in/umber-fishan-32300816b</p>
     <p>GitHub: github.com/yourusername</p>
 </section>
 
