@@ -339,6 +339,15 @@ nav a:hover {
             text-align: center;
         }
     }
+           p a {
+    color: rgb(0, 183, 255); /* Standard HTML color name */
+    text-decoration: underline; /* Standard practice for links, but optional */
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: rgb(143, 219, 250); /* Slightly different blue for interactivity on hover */
+}
 
     </style>
 </head>
@@ -571,8 +580,8 @@ nav a:hover {
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: umberfishan7@gmail.com.com</p>
-    <p>LinkedIn: www.linkedin.com/in/umber-fishan-32300816b</p>
+<p>Email: <a href="mailto:umberfishan7@gmail.com" class="contact-link">umberfishan7@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/umber-fishan-32300816b" target="_blank" class="contact-link">www.linkedin.com/in/umber-fishan-32300816b</a></p>
     <!-- <p>GitHub: github.com/umberfishan</p> -->
 </section>
 
