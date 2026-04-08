@@ -55,18 +55,42 @@
             font-size: 32px;
         }
 
-        nav {
-            text-align: center;
-            padding: 10px;
-            background: linear-gradient(180deg, #111, #2b2b2b);
-        }
+       nav {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(180deg, #111, #2b2b2b);
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 15px;
+    border-bottom: 1px solid #333;
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00bcd4; /* Subtle highlight color */
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row; /* Horizontal row for web */
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+    }
+    
+    nav a {
+        margin: 0; /* Gap handles spacing now */
+        font-size: 1rem;
+    }
+}
       
 
         section {
