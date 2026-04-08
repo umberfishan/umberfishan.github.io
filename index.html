@@ -56,12 +56,13 @@
         }
 
        nav {
-    text-align: center;
-    padding: 15px;
     background: linear-gradient(180deg, #111, #2b2b2b);
+    padding: 15px 10px;
     display: flex;
-    flex-direction: column; /* Stack vertically on mobile */
-    gap: 15px;
+    flex-direction: row; /* Horizontal for both */
+    justify-content: center; /* Centered links */
+    flex-wrap: wrap; /* Allows wrapping on tiny screens */
+    gap: 10px 20px; /* Vertical gap 10px, Horizontal gap 20px */
     border-bottom: 1px solid #333;
 }
 
@@ -69,25 +70,23 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* Slightly smaller for mobile fit */
+    white-space: nowrap; /* Prevents single words from breaking */
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #00bcd4; /* Subtle highlight color */
+    color: #00bcd4;
 }
 
 /* Desktop Styles */
 @media (min-width: 768px) {
     nav {
-        flex-direction: row; /* Horizontal row for web */
-        justify-content: center;
-        gap: 30px;
         padding: 20px;
+        gap: 30px; /* Wider spacing for desktop */
     }
-    
+
     nav a {
-        margin: 0; /* Gap handles spacing now */
         font-size: 1rem;
     }
 }
