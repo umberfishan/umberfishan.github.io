@@ -55,7 +55,8 @@
             font-size: 32px;
         }
 
-       nav {
+
+        nav {
     background: linear-gradient(180deg, #111, #2b2b2b);
     padding: 15px 10px;
     display: flex;
@@ -189,6 +190,12 @@ nav a:hover {
         margin-bottom: 20px;
         flex-grow: 1; /* Pushes the button to the bottom */
     }
+.card video {
+    width: 100%;
+    height: 200px; /* adjust as needed */
+    object-fit: cover;
+    display: block;
+}
 
     .btn {
         display: inline-block;
@@ -339,7 +346,8 @@ nav a:hover {
             text-align: center;
         }
     }
-           p a {
+
+    p a {
     color: rgb(0, 183, 255); /* Standard HTML color name */
     text-decoration: underline; /* Standard practice for links, but optional */
     transition: color 0.3s ease;
@@ -442,10 +450,13 @@ p a:hover {
         </div>
 
         <div class="card">
-            <img src="images/dreamRoom.jpeg">
+           <video autoplay muted loop playsinline>
+        <source src="videos/supermarket.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
             <h3>Dreamy Apartment</h3>
             <p>A 3D Game where you can design your dream space in this relaxing drag-and-drop room decorating game! Place furniture and decor items in their correct spots to transform empty rooms into beautiful, cozy spaces.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.kingstudios.design.dream.room" target="_blank" class="btn">View Project</a>
+            <a href="#" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
             <img src="images/MagicJuicer.jpg">
@@ -469,7 +480,7 @@ p a:hover {
              <img src="images/chickenNEggs.jpg">
             <h3>Chicken and Eggs</h3>
             <p>Chiken egg game of collecting eggs by distracting Chiken.Spreading grains,throwing pebble and amazing distracting acts.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.gamesplashstudios.hen.egg.puzzle.fun" target="_blank" class="btn">View Project</a>
+            <a href="#" target="_blank" class="btn">View Project</a>
         </div>
          <div class="card">
              <img src="images/pregnantMother.jpg">
